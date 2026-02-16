@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory - Your Complete AI Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AI Tools Hub</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="index.html" class="active">Explore Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero-title">Explore AI Tools</h1>
+            <p class="hero-subtitle">300+ tools to supercharge your workflow</p>
+            <button class="btn-primary" id="addToolBtn">+ Add New Tool</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All Tools</button>
+            <button class="filter-btn" data-category="ide">IDE & Coding</button>
+            <button class="filter-btn" data-category="presentation">Presentations</button>
+            <button class="filter-btn" data-category="video">Video & Image</button>
+            <button class="filter-btn" data-category="productivity">Productivity</button>
+            <button class="filter-btn" data-category="automation">Automation</button>
+            <button class="filter-btn" data-category="content">Content Creation</button>
+            <button class="filter-btn" data-category="marketing">Marketing</button>
+            <button class="filter-btn" data-category="design">Design</button>
+            <button class="filter-btn" data-category="learning">Learning</button>
+            <button class="filter-btn" data-category="deployment">Deployment</button>
+            <button class="filter-btn" data-category="api">APIs</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search tools by name or use case...">
+        </div>
+
+        <div class="tools-grid" id="toolsGrid"></div>
+    </div>
+
+    <div class="modal" id="addToolModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New AI Tool</h2>
+            <form id="addToolForm">
+                <input type="text" id="toolName" placeholder="Tool Name" required>
+                <input type="url" id="toolUrl" placeholder="Tool URL (optional)">
+                <select id="toolCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="ide">IDE & Coding</option>
+                    <option value="presentation">Presentations</option>
+                    <option value="video">Video & Image</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="automation">Automation</option>
+                    <option value="content">Content Creation</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="design">Design</option>
+                    <option value="learning">Learning</option>
+                    <option value="deployment">Deployment</option>
+                    <option value="api">APIs</option>
+                </select>
+                <textarea id="toolDescription" placeholder="Use case and description" rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Add Tool</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>AI Tools Hub - Your gateway to the future of productivity</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Created by <strong>Venkat Karthik</strong></p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                For further details contact: 
+                <a href="mailto:karthikkodeboyina@gmail.com" style="color: var(--accent); text-decoration: none;">karthikkodeboyina@gmail.com</a> | 
+                <a href="tel:+918309827125" style="color: var(--accent); text-decoration: none;">+91 8309827125</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="tools-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
