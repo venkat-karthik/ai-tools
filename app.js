@@ -19,6 +19,12 @@ async function init() {
     await seedDefaultTools();
 
     tools = await fetchTools();
+
+    // Fallback to local data if Supabase returns nothing
+    if (!tools || tools.length === 0) {
+        tools = aiTools;
+    }
+
     renderTools();
 
     // Real-time: append any tool added by another user
